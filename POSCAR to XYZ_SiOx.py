@@ -1,9 +1,11 @@
+#this program was initially to create for SiOx, x = 0.8
+
 import numpy as np
 
-inputfile = open("CONTCAR",'r')
+inputfile = open("CONTCAR",'r') # CONTCAR or POSCAR (in VASP format) you want to change. This file and CONCAR should be in same directory
 line_to_skip = 8
 for i in np.arange(line_to_skip):
-    inputfile.readline()     #skips unwanted 8 line
+    inputfile.readline()     #skips unwanted 8 line from VASP format 
 outfile= open("xyz_format", "w")
 print ("216" ,file =outfile)
 print("Comment : XYZ_format",file=outfile)
